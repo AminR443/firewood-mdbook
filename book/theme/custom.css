@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+    --sidebar-target-width: 360px;
+    --page-padding: clamp(18px, 2.5vw, 34px);
+    --content-max-width: 980px;
+    --menu-bar-height: 58px;
+    --mono-font:
+        "SFMono-Regular", "Source Code Pro", Consolas, "Ubuntu Mono", Menlo,
+        "DejaVu Sans Mono", monospace, monospace;
+}
+
+html {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.002em;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+.light,
+.coal,
+.navy,
+.ayu,
+.rust,
+html:not(.js) {
+    --bg: #000000;
+    --fg: #f5f5f7;
+    --sidebar-bg: #161617;
+    --sidebar-fg: #f1f2f4;
+    --sidebar-non-existant: #74767d;
+    --sidebar-active: #ff394a;
+    --sidebar-spacer: #242529;
+    --scrollbar: #53555d;
+    --icons: #c4c7ce;
+    --icons-hover: #ffffff;
+    --links: #ff394a;
+    --inline-code-color: #ff5f6d;
+    --theme-popup-bg: #161617;
+    --theme-popup-border: #2a2c31;
+    --theme-hover: rgba(255, 57, 74, 0.12);
+    --quote-bg: #121214;
+    --quote-border: #2b2d33;
+    --warning-border: #ff394a;
+    --table-border-color: #24262c;
+    --table-header-bg: #141518;
+    --table-alternate-bg: #0d0d0f;
+    --searchbar-border-color: #2f3137;
+    --searchbar-bg: #101114;
+    --searchbar-fg: #f5f5f7;
+    --searchbar-shadow-color: rgba(255, 57, 74, 0.22);
+    --searchresults-header-fg: #b7bcc6;
+    --searchresults-border-color: #2f3137;
+    --searchresults-li-bg: #101114;
+    --search-mark-bg: rgba(255, 57, 74, 0.22);
+    --sidebar-header-border-color: #ff394a;
+    --footnote-highlight: rgba(255, 57, 74, 0.28);
+    --overlay-bg: rgba(0, 0, 0, 0.55);
+    --color-scheme: dark;
+}
+
+#mdbook-menu-bar {
+    background: linear-gradient(
+        180deg,
+        rgba(22, 22, 23, 0.98) 0%,
+        rgba(22, 22, 23, 0.94) 100%
+    );
+    border-block-end-color: rgba(255, 57, 74, 0.18);
+    box-shadow: 0 1px 0 rgba(255, 57, 74, 0.12);
+}
+
+#mdbook-menu-bar .fa-svg,
+#mdbook-menu-bar .icon-button {
+    padding: 0 10px;
+}
+
+.menu-title {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.sidebar .sidebar-scrollbox {
+    padding: 18px 16px 24px;
+}
+
+.sidebar-resize-handle {
+    background-color: var(--sidebar-bg);
+}
+
+.sidebar {
+    box-shadow: inset -1px 0 0 rgba(255, 57, 74, 0.08);
+}
+
+.chapter {
+    font-size: 1.65rem;
+    line-height: 2.05em;
+}
+
+.chapter li.chapter-item {
+    margin-block-start: 0.35em;
+}
+
+.chapter li a {
+    display: block;
+    padding: 0.32rem 0.8rem;
+    border-radius: 4px;
+    transition:
+        color 120ms ease,
+        background-color 120ms ease,
+        box-shadow 120ms ease;
+}
+
+.chapter li a:hover,
+.chapter li a.active,
+.chapter a.current-header {
+    color: var(--sidebar-active);
+    background-color: var(--theme-hover);
+    box-shadow: inset 2px 0 0 var(--sidebar-active);
+}
+
+.content {
+    padding: 0 14px 84px;
+}
+
+.content main {
+    max-width: var(--content-max-width);
+    font-size: 1.85rem;
+    line-height: 1.72;
+}
+
+.content p,
+.content li,
+.content blockquote,
+.content table {
+    line-height: 1.72;
+}
+
+.content ul,
+.content ol {
+    padding-inline-start: 1.45em;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+}
+
+.content h1 {
+    margin-block-start: 1.4rem;
+    font-size: clamp(3.8rem, 3.2rem + 1vw, 5.1rem);
+    font-weight: 700;
+}
+
+.content h2 {
+    margin-block-start: 2.4em;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.content h3 {
+    font-size: 2.45rem;
+    font-weight: 600;
+}
+
+.content h4 {
+    font-size: 2.05rem;
+    font-weight: 600;
+}
+
+.content h5,
+.content h6 {
+    font-size: 1.78rem;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    margin: 2rem 0 2.4rem;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+table td,
+table thead th {
+    padding: 10px 16px;
+}
+
+blockquote {
+    border-radius: 12px;
+    padding: 0.6rem 1.6rem;
+}
+
+pre {
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    font-size: 1.55rem;
+    background-color: #0c0c0e;
+    box-shadow: inset 0 0 0 1px rgba(255, 57, 74, 0.12);
+}
+
+:not(pre) > .hljs {
+    border-radius: 6px;
+    padding: 0.18em 0.42em;
+    background-color: rgba(255, 57, 74, 0.08);
+}
+
+code {
+    font-size: 0.9em;
+}
+
+.content a {
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.14em;
+}
+
+.content a:hover {
+    color: #ff5f6d;
+}
+
+.nav-chapters:hover {
+    background-color: rgba(255, 57, 74, 0.08);
+}
+
+.mobile-nav-chapters {
+    background-color: #161617;
+}
+
+.nav-chapters {
+    max-width: 180px;
+    min-width: 110px;
+}
+
+.mobile-nav-chapters {
+    width: 110px;
+}
+
+@media only screen and (max-width: 900px) {
+    :root {
+        --sidebar-target-width: 320px;
+        --content-max-width: 100%;
+    }
+
+    body {
+        font-size: 1.72rem;
+    }
+
+    .menu-title {
+        font-size: 2.35rem;
+    }
+
+    .content {
+        padding: 0 8px 72px;
+    }
+
+    .content main {
+        font-size: 1.75rem;
+    }
+
+    .content h1 {
+        font-size: 3.6rem;
+    }
+
+    .content h2 {
+        font-size: 2.7rem;
+    }
+}

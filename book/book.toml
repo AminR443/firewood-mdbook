@@ -3,3 +3,6 @@ title = "Firewood Documentation"
 authors = ["Firewood Contributors"]
 language = "en"
 src = "src"
+
+[output.html]
+additional-css = ["theme/custom.css"]
