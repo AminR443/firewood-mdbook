@@ -1,0 +1,5 @@
+[book]
+title = "Firewood Documentation"
+authors = ["Firewood Contributors"]
+language = "en"
+src = "src"

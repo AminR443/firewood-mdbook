@@ -1,0 +1,1 @@
+../../../../firewood/examples/insert.rs
