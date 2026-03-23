@@ -202,7 +202,7 @@ blockquote {
 
 pre {
     border-radius: 14px;
-    padding: 1.4rem 1.6rem;
+    padding: 0px;
     font-size: 1.55rem;
     background-color: #0c0c0e;
     box-shadow: inset 0 0 0 1px rgba(255, 57, 74, 0.12);
@@ -215,6 +215,7 @@ pre {
 }
 
 code {
+    border-radius: 6px;
     font-size: 0.9em;
 }
 
